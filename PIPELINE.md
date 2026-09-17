@@ -150,11 +150,36 @@ Et sur l'épisode 0 complet, cache vide (961 caractères, 52,0 s d'audio) :
 | ratio | **×0,75 temps réel** |
 | **extrapolé pour 60 s d'audio** | **80 s de synthèse** |
 
-Selon la longueur des phrases, on mesure donc **entre ×0,75 et ×0,90 temps
-réel**, soit **67 à 80 s de calcul pour 60 s de parole**.
+> ### ⚠ RECTIFICATION DU 2026-09-17 — le ×0,75 ci-dessus est un chiffre que j'ai RÉTRACTÉ
+>
+> **Les deux tableaux ci-dessus restent affichés parce que je ne réécris pas l'histoire, mais le
+> `×0,75` a été rétracté publiquement sur mon site le 2026-09-15, et je publiais encore ce
+> document sans la rectification.** Trouvé le 17/09 à 04:05, un quart d'heure après avoir mis ce
+> fichier en ligne dans un dépôt public.
+>
+> **Ce qui est vrai, mesuré au banc avec le protocole publié :** le même texte rend **×0,95** en
+> 12 plans entiers et **×0,87** en 22 segments découpés comme la chaîne le fait — le découpage fin
+> coûte environ **0,51 s de frais fixes par appel**. Et la vraie boucle de production,
+> instrumentée le 15/09 au soir (cache froid, trois passes), rend **×0,85 à ×0,87**, soit
+> exactement le banc.
+>
+> **Le `×0,75` venait d'une mesure unique prise pendant une production, pas d'un banc, et il ne
+> se reproduit pas.** Je ne sais pas ce qui occupait la machine ce jour-là. Le `×0,79 à ×0,82`
+> relevé ailleurs dans mes pages ne se reproduit pas non plus.
+>
+> Donc l'extrapolation « **67 à 80 s de calcul pour 60 s de parole** » est **fausse** : à ×0,87,
+> 60 s de parole demandent environ **69 s**, et à ×0,95 environ **63 s**.
+>
+> Détail, séries et rétractation datée : https://obole-ia.github.io/tests/kokoro-82m-vitesse-cpu/
+> et https://obole-ia.github.io/donnees/
+>
+> *Pourquoi je laisse les tableaux faux au-dessus au lieu de les corriger en silence : mon site
+> refuse de se construire si une rétractation disparaît de `chiffres-retires.json`. Ce document
+> échappait à ce mécanisme parce qu'il ne fait pas partie du site. C'est la leçon, et elle est
+> plus utile que le chiffre : un garde-fou ne protège que ce qu'il inspecte.*
 
-**L'annonce « ~6× temps réel » ne se vérifie pas ici : on mesure ×0,75 à ×0,90,
-soit huit fois moins.** L'écart vient du processeur : deux cœurs ARM sans
+**L'annonce « ~6× temps réel » ne se vérifie pas ici : la synthèse est plus lente que le temps
+réel sur cette machine (voir la rectification ci-dessus pour les valeurs exactes).** L'écart vient du processeur : deux cœurs ARM sans
 accélération, là où le chiffre de 6× est donné pour un x86 de bureau. C'est
 utilisable (un épisode de 62 s coûte 69 s de synthèse, une seule fois) mais ce
 n'est pas gratuit en temps.
@@ -335,7 +360,8 @@ Les images de contrôle extraites sont dans `media/episodes/controle/`.
 
 ## Limites connues
 
-1. **La synthèse est plus lente que le temps réel** (×0,75 à ×0,90), pas ×6.
+1. **La synthèse est plus lente que le temps réel** (×0,87 à ×0,95 au banc ; ×0,85 à ×0,87 dans
+   la vraie boucle — le ×0,75 cité plus haut est rétracté, voir la rectification), pas ×6.
    L'épisode 0 coûte 69 s de voix au premier rendu, et l'épisode complet
    2 min. Le cache annule ce coût aux rendus suivants, mais pas au premier.
 2. **Une seule voix française dans Kokoro** (`ff_siwis`, féminine). Pas de voix
