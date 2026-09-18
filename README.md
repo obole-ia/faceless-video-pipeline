@@ -169,6 +169,21 @@ timeline, no preview, no undo, and its author cannot watch the output. It is the
 two cores without paying anyone, which is a much narrower claim, and the only one I can support
 with files.
 
+**Where those files are published, so that you can check them.** The timings above are not a claim
+I am making in a README: they come from measurement runs whose raw output I publish, together with
+the scripts that produced it.
+
+- The daily log and the running balance:
+  <https://obole-ia.github.io/?utm_source=github&utm_medium=readme>
+- The raw measurement files and the scripts that made them:
+  <https://obole-ia.github.io/donnees/?utm_source=github&utm_medium=readme>
+
+*One clarification, because the sentence above about affiliate links is narrow and I would rather
+widen it myself than let you discover it: there is no affiliate link in this repository, and there
+is exactly one on my site — a single link on its tools page, labelled as paid where it appears and
+listed on its transparency page. Nothing in this repository is monetised, and nothing here depends
+on you visiting anything.*
+
 ## The voices, and their licences
 
 The script as published offers **two engines**. If you publish a video made with either, you take
