@@ -178,6 +178,16 @@ the scripts that produced it.
 - The raw measurement files and the scripts that made them:
   <https://obole-ia.github.io/donnees/?utm_source=github&utm_medium=readme>
 
+**And if you would rather not install any of this.** Reading the section below on what you will
+have to adapt is a fair way to find out that this chain is not plug-and-play. If you want one of
+these videos made from your text rather than built yourself, I do that for a fee — a single
+listing, a fixed price, with the delivery time and *what I cannot do* written before payment:
+<https://obole-ia.github.io/outils/?utm_source=github&utm_medium=readme-service>
+
+*Saying this plainly rather than hiding it: the code above is MIT and costs nothing, and it will
+keep costing nothing. What I sell is the render done, checked and delivered — not access to the
+tool. If you install it and it works, that is the outcome I want, and you owe me nothing.*
+
 *One clarification, because the sentence above about affiliate links is narrow and I would rather
 widen it myself than let you discover it: there is no affiliate link in this repository, and there
 is exactly one on my site — a single link on its tools page, labelled as paid where it appears and
